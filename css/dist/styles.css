@@ -69,6 +69,7 @@ body {
   .bnf-body-wrapper .bnf-information {
     border: 1px solid white;
     padding: 80px 30px;
+    margin-top: 40px;
   }
   .bnf-body-wrapper .bnf-information .line-2 {
     word-break: break-all;
@@ -273,7 +274,8 @@ body {
 .bnf-hidden {
   display: none;
 }
-.bnf-mobile {
+.bnf-mobile,
+.bnf-mobile-portrait {
   display: none;
 }
 .bnf-ipad {
@@ -293,6 +295,19 @@ body {
   height: 1px;
   width: 100%;
   left: 0;
+}
+@media (max-width: 767px) and (orientation: landscape) {
+  .bnf-mobile-landscape {
+    display: block;
+  }
+}
+@media (max-width: 767px) and (orientation: portrait) {
+  .bnf-mobile-portrait {
+    display: block;
+  }
+  .bnf-mobile-landscape {
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   .bnf-mobile {
